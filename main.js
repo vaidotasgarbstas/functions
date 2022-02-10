@@ -1,15 +1,12 @@
-let btn1 = document.getElementById('btn1');
+let btn = document.getElementById('btn');
+btn.addEventListener('click', function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    console.log(bgColor);
 
-btn1.addEventListener("click", function () {
-    let form = document.getElementById("form");
-    form.classList.remove("visible");
-})
+    document.body.style.background = bgColor;
+});
 
-
-let btn2 = document.getElementById('btn2');
-
-btn2.addEventListener("click", function () {
-    let form = document.getElementById("form");
-    form.classList.add("visible");
-    swal("Dekojame!", "Jusu nuomone mums svarbi!", "success");
-})
+random_bg_color();
