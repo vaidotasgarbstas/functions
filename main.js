@@ -1,12 +1,28 @@
-let btn = document.getElementById('btn');
-btn.addEventListener('click', function random_bg_color() {
-    var x = Math.floor(Math.random() * 256);
-    var y = Math.floor(Math.random() * 256);
-    var z = Math.floor(Math.random() * 256);
-    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-    console.log(bgColor);
+let img = document.querySelector('img');
 
-    document.body.style.background = bgColor;
+let btn1 = document.getElementById('btn1');
+btn1.addEventListener('click', function () {
+    img.style.float = "left";
+    img.style.marginLeft = "0";
+});
+let btn2 = document.getElementById('btn2');
+btn2.addEventListener('click', function () {
+    img.style.float = "right";
+});
+let btn3 = document.getElementById('btn3');
+btn3.addEventListener('click', function () {
+    img.style.display = "none";
+});
+let btn4 = document.getElementById('btn4');
+btn4.addEventListener('click', function () {
+    let main = document.querySelector("main");
+    main.appendChild(img);
+});
+let btn5 = document.getElementById('btn5');
+btn5.addEventListener('click', function () {
+    let div = document.querySelector(".pastraipos");
+    let pirmasP = div.firstChild;
+    div.insertBefore(img, pirmasP);
 });
 
-random_bg_color();
+
