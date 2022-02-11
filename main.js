@@ -1,28 +1,26 @@
-let img = document.querySelector('img');
+function rand(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
-let btn1 = document.getElementById('btn1');
-btn1.addEventListener('click', function () {
-    img.style.float = "left";
-    img.style.marginLeft = "0";
-});
-let btn2 = document.getElementById('btn2');
-btn2.addEventListener('click', function () {
-    img.style.float = "right";
-});
-let btn3 = document.getElementById('btn3');
-btn3.addEventListener('click', function () {
-    img.style.display = "none";
-});
-let btn4 = document.getElementById('btn4');
-btn4.addEventListener('click', function () {
-    let main = document.querySelector("main");
-    main.appendChild(img);
-});
-let btn5 = document.getElementById('btn5');
-btn5.addEventListener('click', function () {
-    let div = document.querySelector(".pastraipos");
-    let pirmasP = div.firstChild;
-    div.insertBefore(img, pirmasP);
-});
+let result = document.createElement('p');
+let count = 0;
+let randNum = rand(1, 100);
+console.log(randNum);
 
-
+let pirmaForma = document.forms["pirma"];
+pirmaForma.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let skaicius = +pirmaForma["number"].value;
+    console.log(skaicius);
+    count++;
+    if (randNum > skaicius) {
+        result.textContent = `Iveskite didesni skaiciu nei ${skaicius}.`;
+    } else if (randNum < skaicius) {
+        result.textContent = `Iveskite mazesni skaiciu nei ${skaicius}.`;
+    } else {
+        result.textContent = `Atspejote is ${count} karto`;
+    }
+    body.appendChild(result);
+});
