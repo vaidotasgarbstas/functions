@@ -6,14 +6,25 @@
     margin-top: 20px;
     text-align: center;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
+}
+.btn:hover {
+    color: #4caf50;
+    background-color: white;
+    border-style: solid;
+    border-color: #4caf50;
 }
 
 .name {
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 5px;
+}
+
+.input1 {
+    width: 500px;
+    margin-right: 10px;
 }
