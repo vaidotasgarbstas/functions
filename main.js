@@ -1,26 +1,10 @@
-function rand(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
-}
+let calc = document.forms["calculator"];
+let sum = document.createElement("p")
 
-let result = document.createElement('p');
-let count = 0;
-let randNum = rand(1, 100);
-console.log(randNum);
-
-let pirmaForma = document.forms["pirma"];
-pirmaForma.addEventListener("submit", function (e) {
+calc.addEventListener("submit", function (e) {
     e.preventDefault();
-    let skaicius = +pirmaForma["number"].value;
-    console.log(skaicius);
-    count++;
-    if (randNum > skaicius) {
-        result.textContent = `Iveskite didesni skaiciu nei ${skaicius}.`;
-    } else if (randNum < skaicius) {
-        result.textContent = `Iveskite mazesni skaiciu nei ${skaicius}.`;
-    } else {
-        result.textContent = `Atspejote is ${count} karto`;
-    }
-    body.appendChild(result);
+    let number1 = +calc["number1"].value;
+    let number2 = +calc["number2"].value;
+    sum.textContent = `Atsakymas: ${number1 + number2}.`;
+    calc.appendChild(sum);
 });

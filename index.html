@@ -12,16 +12,19 @@
 </head>
 
 <body class="body" id="body">
-    <form name="pirma" class="forma">
-        <div class="margin">
-            Spekite skaiciu nuo 0 iki 100:
+    <form name="calculator" class="calculator">
+        <div class="name">
+            Skaiciu suma:
         </div>
-        <input class="margin" type="number" name="number">
+        <input class="margin" type="number1" name="number1">
+        <div class="pliusas">
+            +
+        </div>
+        <input class="margin" type="number2" name="number2">
         <button class="btn" type="submit">
-            Submit
+            Suma
         </button>
     </form>
+    <p id=answer class="answerText"> </p>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="main.js"></script>
 </body>
