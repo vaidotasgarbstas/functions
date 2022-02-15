@@ -1,10 +1,28 @@
+function getKMI(w, h) {
+    return (w / (h / 100 * h / 100)).toFixed(2);
+}
+
+function info(index) {
+    let answer = "error";
+    if (index < 18.5) {
+        answer = "svoris nepakankamas";
+    } else if (index >= 18.5 && index < 25) {
+        answer = "svoris normalus";
+    } else if (index >= 25 && index <= 30) {
+        answer = "antsvoris";
+    } else if (index > 30) {
+        answer = "nutukimas";
+    } return answer;
+}
+
+let kmi = document.createElement("p")
 let calc = document.forms["calculator"];
-let sum = document.createElement("p")
 
 calc.addEventListener("submit", function (e) {
     e.preventDefault();
-    let number1 = +calc["number1"].value;
-    let number2 = +calc["number2"].value;
-    sum.textContent = `Atsakymas: ${number1 + number2}.`;
-    calc.appendChild(sum);
+    let weight = +calc["weight"].value;
+    let height = +calc["height"].value;
+    kmi.textContent = "Jusu KMI: " + getKMI(weight, height) + " - " + info(getKMI(weight, height));
+    body.appendChild(kmi);
 });
+
