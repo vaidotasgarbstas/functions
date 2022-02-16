@@ -1,20 +1,19 @@
-document.forms[0].addEventListener("submit", function (e) {
-    e.preventDefault()
-    let value = document.getElementById("mySelect").value;
+// document.querySelector("div").addEventListener("click", function (e) {
+//     console.log(e.target);
+//     console.log(e.target.alt);
+//     let imgSrc = e.target;
+//     let src = imgSrc.getAttribute("src");
+// })
 
-    let season = document.getElementById("mySelect");
-    let body = document.querySelector("body");
-
-    if (value == "vasara") {
-        body.style.backgroundImage = "url(https://content.thriveglobal.com/wp-content/uploads/2020/06/summer.jpg?w=1550)"
-    }
-    else if (value == "pavasaris") {
-        body.style.backgroundImage = "url(https://cdn.britannica.com/05/155405-050-F8969EE6/Spring-flowers-fruit-trees-bloom.jpg)";
-    }
-    else if (value == "ruduo") {
-        body.style.backgroundImage = "url(https://cdn.britannica.com/88/137188-050-8C779D64/Boston-Public-Garden.jpg)";
-    }
-    else if (value == "ziema") {
-        body.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/b/b0/Winter_forest_silver.jpg)";
-    }
-});
+function myFunction(imgs) {
+    // Get the expanded image
+    var expandImg = document.getElementById("expandedImg");
+    // Get the image text
+    var imgText = document.getElementById("imgtext");
+    // Use the same src in the expanded image as the image being clicked on from the grid
+    expandImg.src = imgs.src;
+    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+    imgText.innerHTML = imgs.alt;
+    // Show the container element (hidden with CSS)
+    expandImg.parentElement.style.display = "block";
+}

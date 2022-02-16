@@ -12,13 +12,30 @@
 </head>
 
 <body>
-    <form>
-        <select id="mySelect" class="year">
-            <option value="vasara">Vasara</option>
-            <option value="pavasaris">Pavasaris</option>
-            <option value="ruduo">Ruduo</option>
-            <option value="ziema">Ziema</option>
-        </select>
-        <button type="submit">Rodyti</button>
-    </form>
+    <div>
+        <div class="row">
+            <div class="column">
+                <img src="https://www.zarasuparapija.lt/wp-content/uploads/2020/07/nature.jpg" alt="Nature" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Field-with-snow-champ-enneige.jpg" alt="Snow" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="https://geographical.co.uk/media/k2/items/cache/e533c4b8d2d2d3798f3271c35ca6e050_XL.jpg" alt="Mountains" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="https://oneplymouth.co.uk/wp-content/uploads/2021/10/Visual-of-light-ceiling-Mayflower-Street-1024x673.jpg" alt="Lights" onclick="myFunction(this);">
+            </div>
+        </div>
+        <!-- The expanding image container -->
+        <div class="container">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+            <!-- Expanded image -->
+            <img id="expandedImg" style="width:100%">
+
+            <!-- Image text -->
+            <div id="imgtext"></div>
+        </div>
 </body>
