@@ -12,30 +12,15 @@
 </head>
 
 <body>
-    <div>
-        <div class="row">
-            <div class="column">
-                <img src="https://www.zarasuparapija.lt/wp-content/uploads/2020/07/nature.jpg" alt="Nature" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Field-with-snow-champ-enneige.jpg" alt="Snow" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-                <img src="https://geographical.co.uk/media/k2/items/cache/e533c4b8d2d2d3798f3271c35ca6e050_XL.jpg" alt="Mountains" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-                <img src="https://oneplymouth.co.uk/wp-content/uploads/2021/10/Visual-of-light-ceiling-Mayflower-Street-1024x673.jpg" alt="Lights" onclick="myFunction(this);">
-            </div>
+    <button class="btn">Randomize</button>
+    <main class="container">
+        <div class="card">
+            <img class="img" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Picture">
+            <div>Name: </div>
+            <div>Age: </div>
+            <div>Address: </div>
+            <div>Email: </div>
         </div>
-        <!-- The expanding image container -->
-        <div class="container">
-            <!-- Close the image -->
-            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
 
-            <!-- Expanded image -->
-            <img id="expandedImg" style="width:100%">
-
-            <!-- Image text -->
-            <div id="imgtext"></div>
-        </div>
+    </main>
 </body>
